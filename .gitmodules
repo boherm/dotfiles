@@ -1,0 +1,9 @@
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "intelephense"]
+	path = intelephense
+	url = git@github.com:boherm/intelephense-licence.git
+[submodule "nvim/.config/nvim/vscode-php-debug"]
+	path = nvim/.config/nvim/vscode-php-debug
+	url = git@github.com:xdebug/vscode-php-debug.git
