@@ -22,6 +22,9 @@ return {
         dap.listeners.before.event_exited.dapui_config = function()
             dapui.close()
         end
+        dap.listeners.after.disconnect.dapui_config = function()
+            dapui.close()
+        end
 
         -- Setup UI
         vim.api.nvim_set_hl(0, 'DapBreakpoint', { ctermbg = 0, fg = '#993939', bg = '#31353f' })
@@ -37,7 +40,7 @@ return {
         -- Set keybindings
         vim.keymap.set('n', '<Leader>dc', function() dap.continue() end, { desc="Debug Continue" })
         vim.keymap.set('n', '<Leader>db', function() dap.toggle_breakpoint() end, { desc="Toggle breakpoint" })
-        vim.keymap.set('n', '<Leader>dq', function() dapui.close() end, { desc="Close Debug UI" })
+        vim.keymap.set('n', '<Leader>dq', function() dapui.toggle() end, { desc="Toggle Debug UI" })
 
         -- Setup php
         dap.adapters.php = {
