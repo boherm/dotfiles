@@ -1,5 +1,6 @@
 -- GLOBAL --
 vim.keymap.set("n", "<leader>nd", ":chdir ~/", { desc="Change current directory" })
+vim.keymap.set("n", "tc", ":tabnew<CR>", { desc="New tab" })
 
 -- WINDOW --
 vim.keymap.set("n", "<leader>ws", function()
