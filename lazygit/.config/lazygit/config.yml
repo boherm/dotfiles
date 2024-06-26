@@ -24,3 +24,9 @@ gui:
     searchingActiveBorderColor:
       - '#f9e2af'
 confirmOnQuit: true
+
+# keybindings
+keybinding:
+  commits:
+    moveDownCommit: <pgdown>
+    moveUpCommit: <pgup>
