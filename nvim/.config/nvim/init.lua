@@ -12,6 +12,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Custom yank highlight
+vim.cmd([[
+    augroup yank_highlight
+        autocmd!
+        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=200})
+    augroup END
+]])
+
 -- Require custom options
 require("nvim-options")
 require("shortcuts")
