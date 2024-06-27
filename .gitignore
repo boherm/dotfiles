@@ -1,0 +1,3 @@
+# Ignore tmux plugins except for tpm, the tmux plugin manager
+tmux/.tmux/plugins/*
+!tmux/.tmux/plugins/tpm
