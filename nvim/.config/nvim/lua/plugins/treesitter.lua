@@ -30,7 +30,7 @@ return {
                 --	"typescript",
                 --	"vue",
                 --},
-                highlight = { enable = true, disable = { "php" } },
+                highlight = { enable = true, additional_vim_regex_highlighting = { "php" } },
                 indent = { enabled = false },
             })
         end,
