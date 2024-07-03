@@ -12,6 +12,10 @@
       {
         "language": ["twig"],
         "path": "./twig.json"
+      },
+      {
+        "language": ["javascript", "typescript"],
+        "path": "./js.json"
       }
     ]
   }
