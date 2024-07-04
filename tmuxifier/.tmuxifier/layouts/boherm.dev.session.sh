@@ -20,7 +20,8 @@ if initialize_session "boherm-dev"; then
   run_cmd "nvim"
 
   select_window 3
-  run_cmd "make dev"
+  run_cmd "nvm use 18"
+  run_cmd "npm run dev"
 
 fi
 
