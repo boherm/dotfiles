@@ -30,6 +30,7 @@ return {
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc="Buffers" })
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc="Help nvim" })
 			vim.keymap.set("n", "<leader>fS", builtin.lsp_document_symbols, { desc="Find Symbols in current buffer" })
+			vim.keymap.set("n", "<leader>fF", builtin.lsp_dynamic_workspace_symbols, { desc="Find Symbols everywhere" })
 
             -- dap bindings
 			vim.keymap.set("n", "<leader>fd", require'telescope'.extensions.dap.list_breakpoints, { desc="List breakpoints" })
