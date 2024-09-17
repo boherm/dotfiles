@@ -29,6 +29,7 @@ return {
 			vim.keymap.set("n", "<leader>fg", builtin.git_status, { desc="Git status" })
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc="Buffers" })
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc="Help nvim" })
+			vim.keymap.set("n", "<leader>fS", builtin.lsp_document_symbols, { desc="Find Symbols in current buffer" })
 
             -- dap bindings
 			vim.keymap.set("n", "<leader>fd", require'telescope'.extensions.dap.list_breakpoints, { desc="List breakpoints" })
