@@ -8,16 +8,16 @@ return {
     end,
     config = function()
         local wk = require("which-key")
-        wk.register({
-            ["<leader>b"] = { name = "buffers" },
-            ["<leader>c"] = { name = "code" },
-            ["<leader>d"] = { name = "debug" },
-            ["<leader>f"] = { name = "finders" },
-            ["<leader>g"] = { name = "git" },
-            ["<leader>h"] = { name = "git hunks" },
-            ["<leader>n"] = { name = "nvim" },
-            ["<leader>t"] = { name = "tests" },
-            ["<leader>w"] = { name = "window" },
+        wk.add({
+            { "<leader>b", group = "buffers" },
+            { "<leader>c", group = "code" },
+            { "<leader>d", group = "debug" },
+            { "<leader>f", group = "finders" },
+            { "<leader>g", group = "git" },
+            { "<leader>h", group = "git hunks" },
+            { "<leader>n", group = "nvim" },
+            { "<leader>t", group = "tests" },
+            { "<leader>w", group = "window" },
         })
     end,
 }
