@@ -23,3 +23,6 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>") -- switch right window
 
 -- BUFFER --
 vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", { desc="Close buffer" })
+
+-- TAB --
+vim.keymap.set("n", "gy", ":tabnew<CR>", { desc="New tab" })
