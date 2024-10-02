@@ -3,6 +3,7 @@ alias sc="symfony console"
 alias clr="clear"
 alias cat="bat"
 alias fix_ps_classic="cd themes/classic/_dev/ && npm uninstall node-sass && npm install --save-dev sass && cd ../../.."
+alias ec="cd ~/dotfiles && nvim"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
