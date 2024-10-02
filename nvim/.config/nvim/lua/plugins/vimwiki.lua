@@ -1,0 +1,4 @@
+-- Vimwiki
+return {
+    'vimwiki/vimwiki',
+}
