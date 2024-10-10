@@ -1,5 +1,8 @@
 -- Finder: telescope
 return {
+    {
+        "ElPiloto/telescope-vimwiki.nvim",
+    },
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
@@ -19,6 +22,7 @@ return {
                     },
                 },
 			})
+            require('telescope').load_extension('vimwiki')
             require("telescope").load_extension("dap")
 			local builtin = require("telescope.builtin")
 
@@ -31,6 +35,7 @@ return {
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc="Help nvim" })
 			vim.keymap.set("n", "<leader>fS", builtin.lsp_document_symbols, { desc="Find Symbols in current buffer" })
 			vim.keymap.set("n", "<leader>fF", builtin.lsp_dynamic_workspace_symbols, { desc="Find Symbols everywhere" })
+			vim.keymap.set("n", "<leader>fw", require'telescope'.extensions.vimwiki.vimwiki, { desc="Find files in vimwiki" })
 
             -- dap bindings
 			vim.keymap.set("n", "<leader>fd", require'telescope'.extensions.dap.list_breakpoints, { desc="List breakpoints" })
