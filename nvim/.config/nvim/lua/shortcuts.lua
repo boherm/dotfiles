@@ -29,3 +29,4 @@ vim.keymap.set("n", "gy", ":tabnew<CR>", { desc="New tab" })
 
 -- Vimwiki
 vim.keymap.set("n", "<leader><space>", ":VimwikiToggleListItem<CR>", { desc="Toggle vimwiki item"})
+vim.keymap.set("n", "<leader>wt", ":20new +VimwikiIndex<CR>", { desc="Open vimwiki window"})
