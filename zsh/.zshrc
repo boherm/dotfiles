@@ -1,3 +1,5 @@
+autoload -U compinit; compinit
+
 alias s="symfony"
 alias sc="symfony console"
 alias clr="clear"
@@ -7,7 +9,7 @@ alias ec="cd ~/dotfiles && nvim"
 alias gra="python3 /Users/bHermans/Grammalecte-fr-v2.1.1/grammalecte-cli.py"
 
 export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/.tmuxifier/bin:$PATH"
 export EDITOR="nvim"
 export BAT_PAGING="always"
 
