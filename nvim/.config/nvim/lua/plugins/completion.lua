@@ -17,9 +17,13 @@ return {
                         accept = "<C-Enter>",
                         dismiss = "<C-M-Enter>",
                     },
+                },
+                filetypes = {
+                    yaml = true,
+                    markdown = true,
                 }
             })
-        end,
+            end,
     },
     {
         "L3MON4D3/LuaSnip",
