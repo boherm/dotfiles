@@ -14,8 +14,8 @@ return {
                     hide_during_completion = true,
                     debounce = 75,
                     keymap = {
-                        accept = "<C-Enter>",
-                        dismiss = "<C-M-Enter>",
+                        accept = "<Tab>",
+                        dismiss = "<M-Tab>",
                     },
                 },
                 filetypes = {
