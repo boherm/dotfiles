@@ -7,16 +7,23 @@ session_root "~/cw-project"
 if initialize_session "cw-project"; then
 
   # Create a new window inline within session layout definition.
-  new_window "git"
-  new_window "editor"
+  new_window "skeleton"
+  new_window "cli"
   new_window "shell"
 
   select_window 0
-  run_cmd "lazygit"
-
-  select_window 1
+  run_cmd "cd skeleton/"
   run_cmd "nvm use 18"
   run_cmd "nvim"
+
+  select_window 1
+  run_cmd "cd cli/"
+  run_cmd "nvm use 18"
+  run_cmd "nvim"
+
+  select_window 2
+  run_cmd "cd cli/"
+  run_cmd "clear"
 
 fi
 
