@@ -15,6 +15,8 @@ end, { desc="Split vertically" })
 vim.keymap.set("n", "<leader>ww", "<C-W>w", { desc="Switch window" })
 vim.keymap.set("n", "<leader>wc", "<C-W>c", { desc="Close window" })
 vim.keymap.set("n", "<leader>s", ":w<CR>", { desc="Save current buffer" })
+vim.keymap.set("n", "<leader>S", ":mksession! .swo<CR>", { desc="Save session (.swo file)" })
+vim.keymap.set("n", "<leader>L", ":source .swo<CR>", { desc="Load session (.swo file)" })
 
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>") -- switch top window
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>") -- switch bottom window
