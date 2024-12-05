@@ -1,5 +1,7 @@
 autoload -U compinit; compinit
 
+alias t="task"
+alias tui="taskwarrior-tui"
 alias s="symfony"
 alias sc="symfony console"
 alias clr="clear"
