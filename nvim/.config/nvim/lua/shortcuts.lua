@@ -27,7 +27,7 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>") -- switch right window
 vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", { desc="Close buffer" })
 
 -- TAB --
-vim.keymap.set("n", "gy", ":tabnew<CR>", { desc="New tab" })
+vim.keymap.set("n", "nt", ":tabnew<CR>", { desc="New tab" })
 
 -- Vimwiki
 vim.keymap.set("n", "<leader><space>", ":VimwikiToggleListItem<CR>", { desc="Toggle vimwiki item"})
