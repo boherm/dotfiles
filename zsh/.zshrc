@@ -8,6 +8,7 @@ compinit -C
 alias t="task"
 alias tt="taskwarrior-tui"
 alias tm="timew"
+alias c="composer"
 alias s="symfony"
 alias sc="php bin/console"
 alias sc-comp='eval "$(php bin/console completion zsh)"'
