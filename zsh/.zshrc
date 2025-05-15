@@ -9,7 +9,8 @@ alias t="task"
 alias tt="taskwarrior-tui"
 alias tm="timew"
 alias s="symfony"
-alias sc="symfony console"
+alias sc="php bin/console"
+alias sc-comp='eval "$(php bin/console completion zsh)"'
 alias clr="clear"
 alias cat="bat"
 alias fix-ps-classic="cd themes/classic/_dev/ && npm uninstall node-sass && npm install --save-dev sass && cd ../../.."
@@ -32,7 +33,7 @@ eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
 
 # Scaleway CLI autocomplete initialization.
-alias scw-autocomplete='eval "$(scw autocomplete script shell=zsh)"'
+alias scw-comp='eval "$(scw autocomplete script shell=zsh)"'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
