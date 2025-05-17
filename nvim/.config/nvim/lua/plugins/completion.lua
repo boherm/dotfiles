@@ -14,7 +14,7 @@ return {
                     hide_during_completion = true,
                     debounce = 75,
                     keymap = {
-                        accept = "<S-Tab>",
+                        accept = "<C-a>",
                     }
                 },
                 filetypes = {
