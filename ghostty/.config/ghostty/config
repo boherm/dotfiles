@@ -1,3 +1,4 @@
 theme = catppuccin-mocha
+palette = 7=#000000
 font-family = Hack Nerd Font Mono
 font-size = 14
