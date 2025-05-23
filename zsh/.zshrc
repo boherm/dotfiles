@@ -27,6 +27,8 @@ alias ni="neovide --title-hidden --opengl --frame transparent &"
 alias tx="tmux"
 alias txa="tmux attach-session -t"
 alias txl="tmux list-sessions"
+alias y="yazi"
+alias p="php"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/go/bin:$HOME/.tmuxifier/bin:$PATH"
