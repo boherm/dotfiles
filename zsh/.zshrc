@@ -45,4 +45,6 @@ alias scw-comp='eval "$(scw autocomplete script shell=zsh)"'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+eval "$(zoxide init zsh)"
 # zprof
