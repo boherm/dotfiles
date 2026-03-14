@@ -8,6 +8,7 @@ return {
         local dap, dapui = require("dap"), require("dapui")
 
         dapui.setup()
+        dap.set_log_level('TRACE')
 
         -- Auto open/close ui
         dap.listeners.before.attach.dapui_config = function()
@@ -56,5 +57,32 @@ return {
                 port = 9003
             }
         }
+
+        -- Setup lldb
+        dap.adapters.codelldb = {
+            type = 'server',
+            port = "54321",
+            executable = {
+                -- Change this to your path!
+                command = '/Users/bHermans/Downloads/codelldb/adapter/codelldb',
+                args = {"--port", "54321"},
+            }
+        }
+
+        dap.configurations.cpp = {
+            {
+                name = "Launch",
+                type = "codelldb",
+                request = "launch",
+                program = function()
+                    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                end,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+                args = {},
+                runInTerminal = false,
+            },
+        }
+
     end
 }

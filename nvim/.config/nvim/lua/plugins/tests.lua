@@ -9,5 +9,5 @@ return {
     vim.keymap.set("n", "<leader>ts", ":TestSuite<CR>", { desc="Run test suite" }),
     vim.keymap.set("n", "<leader>tl", ":TestLast<CR>", { desc="Run last test" }),
     vim.keymap.set("n", "<leader>tv", ":TestVisit<CR>", { desc="Visit test file" }),
-    vim.cmd("let test#strategy = 'vimux'"),
+    vim.cmd("let test#strategy = 'neovim_sticky'"),
 }

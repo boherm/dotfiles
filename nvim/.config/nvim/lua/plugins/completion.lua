@@ -35,7 +35,6 @@ return {
         "hrsh7th/nvim-cmp",
         dependencies = {
             "L3MON4D3/LuaSnip",
-            "luckasRanarison/tailwind-tools.nvim",
             "onsails/lspkind-nvim",
         },
         config = function()
@@ -51,7 +50,6 @@ return {
                         maxwidth = 50,
                         ellipsis_char = '...',
                         show_labelDetails = true,
-                        before = require("tailwind-tools.cmp").lspkind_format,
                     }),
                 },
                 snippet = {

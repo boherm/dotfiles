@@ -15,6 +15,9 @@ return {
                 defaults = {
                     layout_config = { height = 0.99, width = 0.99 },
                     mappings = {
+                        i = {
+                            ["<C-h>"] = "which_key"
+                        },
                         n = {
                             ["?"] = "which_key",
                             ['x'] = require('telescope.actions').delete_buffer

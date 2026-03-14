@@ -32,3 +32,11 @@ vim.keymap.set("n", "nt", ":tabnew<CR>", { desc="New tab" })
 -- Vimwiki
 vim.keymap.set("n", "<leader><space>", ":VimwikiToggleListItem<CR>", { desc="Toggle vimwiki item"})
 vim.keymap.set("n", "<leader>wt", ":20new +VimwikiIndex<CR>", { desc="Open vimwiki window"})
+
+-- Reformat json
+vim.keymap.set("n", "<leader>jq", ":%!jq .<CR>", { desc="Reformat JSON"})
+
+-- CMake tools
+vim.keymap.set("n", "<leader>cb", ":CMakeBuild<CR>", { desc="CMake Build"})
+vim.keymap.set("n", "<leader>cc", ":CMakeRun<CR>", { desc="CMake run"})
+vim.keymap.set("n", "<leader>cv", ":CMakeDebug<CR>", { desc="CMake debug"})
