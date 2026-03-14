@@ -29,6 +29,10 @@ alias txa="tmux attach-session -t"
 alias txl="tmux list-sessions"
 alias y="yazi"
 alias p="php"
+alias lg="lazygit"
+alias cr="cargo run --"
+alias ct="cargo test"
+alias ca="cargo"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/go/bin:$HOME/.tmuxifier/bin:$PATH"
@@ -46,5 +50,6 @@ alias scw-comp='eval "$(scw autocomplete script shell=zsh)"'
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
+source ~/.zshrc_private
 eval "$(zoxide init zsh)"
 # zprof
