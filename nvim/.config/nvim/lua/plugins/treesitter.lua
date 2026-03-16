@@ -1,15 +1,16 @@
 -- Highlight: Treesitter
 return {
     {
-        "luckasRanarison/tailwind-tools.nvim",
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-        opts = {} -- your configuration
+        'razak17/tailwind-fold.nvim',
+        opts= {},
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact', 'php', 'blade' },
     },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
-            require("nvim-treesitter.configs").setup({
+            require("nvim-treesitter.config").setup({
                 auto_install = true,
                 --ensure_installed = {
                 --	"vimdoc",

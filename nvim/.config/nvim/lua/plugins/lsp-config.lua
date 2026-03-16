@@ -17,13 +17,13 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
+			local lspconfig =  vim.lsp.config
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
             require('mason-lspconfig').setup({
                 handlers = {
                     function(server_name)
-                        require("lspconfig")[server_name].setup {}
+                        vim.lsp.config[server_name].setup {}
                     end,
 
                     ['tailwindcss'] = function()
