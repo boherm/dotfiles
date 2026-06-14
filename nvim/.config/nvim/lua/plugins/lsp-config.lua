@@ -10,65 +10,54 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "intelephense" },
+				ensure_installed = { "lua_ls", "ts_ls", "intelephense", "vtsls" },
 			})
 		end,
 	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local lspconfig =  vim.lsp.config
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-            require('mason-lspconfig').setup({
-                handlers = {
-                    function(server_name)
-                        vim.lsp.config[server_name].setup {}
-                    end,
-
-                    ['tailwindcss'] = function()
-                        lspconfig.tailwindcss.setup {
-                            capabilities = capabilities,
-                            filetypes = {
-                                "astro",
-                                "javascript",
-                                "javascriptreact",
-                                "typescript",
-                                "typescriptreact",
-                                "vue",
-                                "svelte",
-                                "html",
-                                "css",
-                            },
-                            root_dir = lspconfig.util.root_pattern(
-                                "tailwind.config.cjs",
-                                "tailwind.config.js",
-                                "tailwind.config.mjs",
-                                "tailwind.config.ts",
-                                "postcss.config.js",
-                                "postcss.config.cjs",
-                                "postcss.config.mjs",
-                                "postcss.config.ts",
-                                "package.json",
-                                "astro.config.mjs",
-                                "astro.config.js",
-                                "astro.config.ts",
-                                ".git"
-                            ),
-                            init_options = {
-                                userLanguages = {
-                                    astro = "html",
-                                },
-                            },
-                        }
-                    end,
+            -- Configuration par serveur avec la nouvelle API
+            vim.lsp.config('tailwindcss', {
+                capabilities = capabilities,
+                filetypes = {
+                    "astro", "javascript", "javascriptreact",
+                    "typescript", "typescriptreact", "vue", "svelte", "html", "css",
+                },
+                root_markers = {
+                    "tailwind.config.cjs", "tailwind.config.js",
+                    "tailwind.config.mjs", "tailwind.config.ts",
+                    "postcss.config.js", "package.json", ".git"
+                },
+                init_options = {
+                    userLanguages = { astro = "html" },
                 },
             })
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc="Go to definition" })
-            vim.keymap.set("n", "gr", ":Telescope lsp_references<CR>", { desc="Find all references" })
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc="Code action" })
-		end,
-	},
+            vim.lsp.config('vtsls', {
+                capabilities = capabilities,
+                filetypes = {
+                    "typescript", "javascript",
+                    "typescriptreact", "javascriptreact", "vue"
+                },
+                settings = {
+                    vtsls = { autoUseWorkspaceTsdk = true },
+                },
+            })
+
+            vim.lsp.config('vue_ls', {
+                capabilities = capabilities,
+            })
+
+            -- Active tous les serveurs installés par mason-lspconfig
+            vim.lsp.enable({ 'lua_ls', 'vtsls', 'vue_ls', 'intelephense', 'tailwindcss' })
+
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+            vim.keymap.set("n", "gr", ":Telescope lsp_references<CR>", { desc = "Find all references" })
+            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+        end,
+    },
 }
