@@ -1,7 +1,13 @@
 return {
     {
         "coder/claudecode.nvim",
-        dependencies = { "folke/snacks.nvim" },
+        dependencies = {
+            "folke/snacks.nvim",
+            keys = {
+                { "<C-h>", "<cmd>TmuxNavigateLeft<cr>", mode = "t" },
+                { "<C-l>", "<cmd>TmuxNavigateRight<cr>", mode = "t" },
+            },
+        },
         opts = {
             terminal_cmd = "claude",
             terminal = {
